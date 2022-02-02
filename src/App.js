@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { Component } from "react";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
+import Loader from "./loaders/Loader";
+import products from "./products";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    page: "products",
+    products: [],
+    product: null,
+  };
+  onProductClick = (product) => {
+    this.setState({ page: "product-details", product });
+  };
+  componentDidMount() {
+    this.setState({ products: products });
+  }
+  render() {
+    return (
+      <div className="app">
+        {this.state.page == "products" ? (
+          <Products onProductClick={this.onProductClick} products={products} />
+        ) : (
+          <ProductDetails product={this.state.product} />
+        )}
+      </div>
+    );
+  }
 }
-
-export default App;
