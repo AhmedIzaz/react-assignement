@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-function ProductList({ onProductClick, productList }) {
-  const [products, setProducts] = useState([]);
-  useEffect(() => setProducts(productList), []);
-  console.log("product list");
+function ProductList({ product_list, onProductClick }) {
   return (
-    <div className="product-list-wrapper">
-      {products.map((product) => (
+    <div>
+      {product_list.map((product) => (
         <div onClick={() => onProductClick(product)}>
-          <h3>{product.name}</h3>
+          <h1>{product.name}</h1>
         </div>
       ))}
     </div>

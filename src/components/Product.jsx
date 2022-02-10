@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Product({ product }) {
   return (
-    <div className="product">
+    <div>
       <h3>{product.name}</h3>
-      <p>{product.price}</p>
-      <small>{product.description}</small>
+      <p>{product.description}</p>
+      <small>
+        <strong>{product.price}</strong>
+      </small>
     </div>
   );
 }

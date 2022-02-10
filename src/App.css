@@ -1,20 +1,27 @@
-.body {
+* {
+  overflow: hidden;
+}
+#root {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
-.product-list-wrapper {
-  width: 20em;
-  height: 20em;
-}
-
-.product {
-  width: 15em;
-  background-color: aliceblue;
-  box-shadow: 0.1em 0.1em 0.4em rgb(226, 226, 226);
+/* .container {
+  width: 30vw;
+  height: 30vh;
+} */
+button {
+  cursor: pointer;
   padding: 1em;
+  font-size: 1.5rem;
+  background-color: bisque;
   border-radius: 1em;
+  border: none;
+  box-shadow: 0.2em 0.2em 0.4em rgb(189, 189, 189);
+}
+
+div {
+  padding: 1em;
 }
