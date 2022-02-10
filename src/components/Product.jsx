@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Loader from "../loaders/Loader";
 
 function Product({ product }) {
+  const [theProduct, setProduct] = useState(null);
+  useEffect(() => setTimeout(() => setProduct(product), 1000), []);
   return (
-    <div>
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
-      <small>
-        <strong>{product.price}</strong>
-      </small>
-    </div>
+    <>
+      {!theProduct ? (
+        <Loader />
+      ) : (
+        <div>
+          <h3>{theProduct.name}</h3>
+          <p>{theProduct.description}</p>
+          <small>
+            <strong>{theProduct.price}</strong>
+          </small>
+        </div>
+      )}
+    </>
   );
 }
 
