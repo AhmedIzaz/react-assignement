@@ -1,0 +1,7 @@
+.product-container {
+  margin: 2em 0;
+  padding: 1em 2em;
+  background-color: antiquewhite;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.3em grey;
+}
