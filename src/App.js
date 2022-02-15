@@ -13,7 +13,7 @@ function App() {
     setProduct(the_product);
     setPage("product-details");
   };
-
+  const change_page = (page_name) => setPage(page_name);
   useEffect(() => setTimeout(() => setProducts(product_list), 1000), []);
   return (
     <>
@@ -21,18 +21,13 @@ function App() {
         <Loader />
       ) : (
         <div className="container">
-          {page != "product-list" && (
-            <button onClick={() => setPage("product-list")}>
-              back to Product List page
-            </button>
-          )}
           {page == "product-list" ? (
             <ProductList
               product_list={products}
               onProductClick={onProductClick}
             />
           ) : (
-            <Product product={product} />
+            <Product product={product} onPageChange={change_page} />
           )}
         </div>
       )}
