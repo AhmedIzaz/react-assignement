@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Grid, IconButton } from "@material-ui/core";
 import { List_Item } from "./styled_component";
-import { Facebook, Instagram, LinkedIn } from "@material-ui/icons";
+import { Facebook, GitHub, Instagram, LinkedIn } from "@material-ui/icons";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -80,9 +80,16 @@ function App() {
                   <IconButton>
                     <Instagram />
                   </IconButton>
-                  <IconButton>
-                    <LinkedIn />
-                  </IconButton>
+                  <a href="https://www.linkedin.com/in/ahmed-izaz-bhuiyan-1289a1172/">
+                    <IconButton>
+                      <LinkedIn />
+                    </IconButton>
+                  </a>
+                  <a href="https://github.com/ahmed-izaz53">
+                    <IconButton>
+                      <GitHub />
+                    </IconButton>
+                  </a>
                 </div>
               </div>
             </Grid>
