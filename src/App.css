@@ -8,6 +8,7 @@
 
 .container {
   width: 90%;
+  max-width: 1000px;
   background-color: aliceblue;
   padding: 2em 1em;
   border-radius: 1em;
