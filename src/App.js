@@ -80,12 +80,15 @@ function App() {
                   <IconButton>
                     <Instagram />
                   </IconButton>
-                  <a href="https://www.linkedin.com/in/ahmed-izaz-bhuiyan-1289a1172/">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/ahmed-izaz-bhuiyan-1289a1172/"
+                  >
                     <IconButton>
                       <LinkedIn />
                     </IconButton>
                   </a>
-                  <a href="https://github.com/ahmed-izaz53">
+                  <a target="_blank" href="https://github.com/ahmed-izaz53">
                     <IconButton>
                       <GitHub />
                     </IconButton>
